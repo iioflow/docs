@@ -50,7 +50,7 @@ each crow has its own unique sound, in the form of a generative sequencer. [firs
 
 ### norns
 
-crow integrates seamlessly with norns as a CV and [ii/i2c](/docs/modular/ii) interface. By default, crow can be a norns clocking source or destination. [Many scripts have additional crow functionality](https://norns.community/tag/crow).
+crow integrates seamlessly with norns as a CV and [ii/i2c](/docs/modular/ii) interface. By default, crow can be a norns clocking source or destination. [Many scripts have additional crow functionality](https://norns.community/tag/crow). Please note that presently only a single crow is supported by the norns scripting API.
 
 Want to script on your own? See the full [crow studies](norns) for a complete guide
 
