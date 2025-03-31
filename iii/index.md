@@ -8,7 +8,7 @@ nav_exclude: false
 
 # iii
 
-_note: we're approaching version 1.0.0. some features may change before then!_
+_PRELIMINARY: we're approaching version 1.0.0. some features may change before then!_
 
 An evolution of capabilities for monome grid and arc, where an interactive scripting environment runs on the device itself.
 
