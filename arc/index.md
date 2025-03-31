@@ -50,6 +50,14 @@ monome libraries for other environments:
 
 note, the [grid studies](https://monome.org/docs/grid/grid-computer/#studies) broadly apply to the arc but the OSC patterns differ.
 
+## iii
+
+[iii](/iii) allows scripts to be stored on the device itself and interfacing uses usb-midi.
+
+- [cycles](/iii/library/cycles) - rotating midi cc with friction
+- [erosion](/iii/library/erosion) - four by four meta cc with interpolation and scene recall
+- [snows](/iii/library/snows) - very slow asynchronous arpeggiator
+
 
 ## with norns
 
