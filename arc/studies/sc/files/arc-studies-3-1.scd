@@ -16,7 +16,7 @@ s.waitForBoot({
 	});
 
 	draw = {
-		~a.dark;
+		~a.allOff;
 		for(0, 3, {
 			arg i;
 			point.value(i, pos[i]);

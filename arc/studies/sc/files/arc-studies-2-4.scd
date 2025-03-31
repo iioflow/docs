@@ -9,7 +9,6 @@ s.waitForBoot({
 
 	~a.connect();
 
-	~a.dark();
 	~a.led(0, step*16, 10);
 	for(1, 3, {
 		arg i;
@@ -25,7 +24,7 @@ s.waitForBoot({
 	});
 
 	draw = {
-		~a.dark();
+		~a.allOff;
 		~a.led(0, step * 16, 10);
 		for(1, 3, {
 			arg i;
