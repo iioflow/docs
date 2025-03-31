@@ -124,7 +124,7 @@ There is preliminary documentation on the README. We'll move it here with exampl
 
 arc
 
-- [cycles](/iii/library/cycles) - rotating midi cc with friction
-- [erosion](/iii/library/erosion) - four by four meta cc with interpolation and scene recall
-- [snows](/iii/library/snows) - very slow asynchronous arpeggiator
+- [cycles](library/cycles) - rotating midi cc with friction
+- [erosion](library/erosion) - four by four meta cc with interpolation and scene recall
+- [snows](library/snows) - very slow asynchronous arpeggiator
 
