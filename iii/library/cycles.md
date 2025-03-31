@@ -6,7 +6,7 @@ nav_exclude: true
 has_toc: false
 ---
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/1071043221?h=683ab783df" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+<div class="vid"><iframe src="https://player.vimeo.com/video/1071043221?color=ffffff&title=0&byline=0&portrait=0" width="860" height="484" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
 # cycles
 
