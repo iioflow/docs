@@ -37,9 +37,19 @@ arc is a tactile instrument with dynamic visual feedback. applications determine
  
 ### studies
 
-- (sc)
+- [SuperCollider](/docs/arc/studies/sc) -- synthesis engine and programming environment
+
+monome libraries for other environments:
+
+* [libmonome](https://github.com/monome/libmonome) -- C
+* [monome Max package](https://github.com/monome/monome-max-package) -- Max
+* [monomehost](https://github.com/monome/MonomeHost) -- Arduino Due
+* [monome-processing](https://github.com/monome/monome-processing) -- Processing
+* [monomeSC](https://github.com/monome/monomeSC/) -- SuperCollider
+* [pymonome](https://github.com/artfwo/pymonome) -- Python
 
 note, the [grid studies](https://monome.org/docs/grid/grid-computer/#studies) broadly apply to the arc but the OSC patterns differ.
+
 
 ## with norns
 
