@@ -14,7 +14,7 @@ arc is a tactile instrument with dynamic visual feedback. applications determine
 
 - high resolution knobs, 1024 ticks per revolution.
 - each knob is encircled by a sixty-four segment light ring, sixteen-step brightness per LED.
-- 2025 edition has a single pushbutton. see [editions](editions) for more details).
+- 2025 edition has a single pushbutton. (see [editions](editions) for more details).
 
 ## with computers
 
@@ -22,7 +22,7 @@ arc is a tactile instrument with dynamic visual feedback. applications determine
 
 ### applications
 
-[VCV Rack](/docs/grid/computer/vcv-rack) is a virtual modular synth. The Ansible module communicates with the arc. 
+[VCV Rack](/docs/grid/computer/vcv-rack) is a virtual modular synth. The Ansible module communicates with arc. 
 
 [Max](http://cycling74.com/products/max) is a patching environment created by Cycling '74. A free runtime is available. Max for Live is a part of Ableton Live Suite. The following work with Max or Max for Live:
 
@@ -48,7 +48,7 @@ monome libraries for other environments:
 * [monomeSC](https://github.com/monome/monomeSC/) -- SuperCollider
 * [pymonome](https://github.com/artfwo/pymonome) -- Python
 
-note, the [grid studies](https://monome.org/docs/grid/grid-computer/#studies) broadly apply to the arc but the OSC patterns differ.
+note, the [grid studies](https://monome.org/docs/grid/grid-computer/#studies) broadly apply to arc but the OSC patterns differ.
 
 ## iii
 
