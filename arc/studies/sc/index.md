@@ -475,7 +475,7 @@ Done!
 
 - allow each encoder to have its own friction.
 - sync all of the encoders to the movement of the first, at selectable divisions or multiples.
-- implement a 'paging' system, where each encoder controls multiple values depending on the page.
+- implement a 'paging' system, where each encoder controls multiple values depending on the page: min, max, friction setting, shape, etc.
   - try ^this regardless of the presence of keys on your arc!
 
 ### credits
