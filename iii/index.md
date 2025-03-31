@@ -27,13 +27,13 @@ The new firmware is capable of toggling between iii and monome/serial modes.
 
 ## compatibility
 
-grid -- [editions](/grid/editions)
+grid -- [editions](/docs/grid/editions)
 
 - yes: 2022 and later grids (includes grids one and zero)
 - no: 2020-2021 grids use different microcontroller, hence cannot use this firmware. (they are, however, mechanically compatible so we are considering a PCB upgrade. TBA.)
 - no: all other grids use an FTDI USB Serial chip which means they can't do USB-MIDI. 
 
-arc -- [editions](/arc/editions)
+arc -- [editions](/docs/arc/editions)
 
 - yes: 2025. has pushbutton.
 - no: everything else
