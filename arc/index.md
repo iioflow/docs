@@ -10,6 +10,8 @@ has_toc: false
 
 arc is a tactile instrument with dynamic visual feedback. applications determine the interaction between movement, sound, and light. some applications are shared here and we've created studies to help you create your own.
 
+arc is a usb device. it sends serial data when knobs are turned, and changes lights acording to incoming serial data.
+
 ## specifications
 
 - high resolution knobs, 1024 ticks per revolution.
