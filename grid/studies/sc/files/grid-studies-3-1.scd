@@ -7,10 +7,10 @@ s.waitForBoot({
 
 	var draw, cols = 16, rows = 8;
 
-	MonomeGrid.setAddCallback({
+	Monome.setAddCallback({
 		arg serial, port, prefix;
 		("grid was added: " ++ serial ++ " " ++ port ++ " " ++ prefix).postln;
-		if( serial == MonomeGrid.getConnectedDevices[0], {
+		if( serial == Monome.getRegisteredDevices[0], {
 			cols = ~m.cols;
 			rows = ~m.rows;
 		});

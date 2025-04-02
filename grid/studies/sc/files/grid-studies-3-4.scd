@@ -15,10 +15,10 @@ s.waitForBoot({
 
 	~m.connect(0);
 
-	MonomeGrid.setAddCallback({
+	Monome.setAddCallback({
 		arg serial, port, prefix;
 		("grid was added: " ++ serial ++ " " ++ port ++ " " ++ prefix).postln;
-		if( serial == MonomeGrid.getConnectedDevices[0], {
+		if( serial == Monome.getRegisteredDevices[0], {
 			cols = ~m.cols;
 			rows = ~m.rows;
 		});

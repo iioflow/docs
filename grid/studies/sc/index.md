@@ -303,7 +303,7 @@ That will get us started.
 To make our interface adaptive to any size grid (eg. we don't want to count to 16 steps on 64 grid with 8 columns), we can query the number of rows and columns with the `rows` and `cols` accessors. We'll set that up as a callback for added devices with:
 
 ```js
-MonomeGrid.setAddCallback({
+Monome.setAddCallback({
 		arg serial, port, prefix;
 		("grid was added: " ++ serial ++ " " ++ port ++ " " ++ prefix).postln;
 		if( serial == MonomeGrid.getConnectedDevices[0], {
