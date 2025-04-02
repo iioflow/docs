@@ -78,7 +78,7 @@ selection of community contributed scripts that support arc:
 
 <div class="vid"><iframe src="https://player.vimeo.com/video/182119406?color=ffffff&title=0&byline=0&portrait=0" width="860" height="484" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
-[Ansible](/docs/ansible) (discontinued) connects an arc to the eurorack ecosystem.
+[Ansible](/docs/ansible) (discontinued) connects an arc to the eurorack ecosystem. Note: be sure to get the latest firmware for complete arc support.
 
 See [VCV Rack](/docs/grid/computer/vcv-rack) to use a virtual version on your computer, which can then be interfaced to your modular synth in various ways.
 

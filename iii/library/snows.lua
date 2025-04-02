@@ -12,20 +12,9 @@ seq = {1,1,1,1}
 pos = {0,0,0,0}
 sp = {0,0,0,0}
 
-panic = function(ch)
-	for n=0,127 do midi_note_off(n,0,ch) end
-end
-
-
-for n=1,4 do
-	--panic(n)
-	midi_note_on(note[n][seq[n]],127,n)
-end
-
 arc_refresh()
 
 function tick()
-	-- only one metro so we don't check n
 	for n=1,4 do
 		arc_led_all(n,0)
 		pos[n] = pos[n] + sp[n]
