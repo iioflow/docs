@@ -81,28 +81,30 @@ The `MonomeArc` class facilitates easy communication with arcs, modeled after th
 Let's create a variable, `~a`, to initialize the `MonomeArc` class:
 
 ```js
-~a = MonomeArc.new(rotation: 0, prefix: "/monome");
+~a = MonomeArc.new();
 ```
 
-- The `rotation: 0` argument to the initializer is *arc rotation*. If none is provided, `MonomeArc` will assume 0 rotation. Check out the `MonomeArc` help file for additional rotation options!
-- The `prefix: "/monome"` argument is a nickname we can use to alias this script's grid, instead of relying on serial numbers. If none is provided, it will be assigned `"/monome"`.
+There are two optional arguments which can be passed to the initialization:
 
-Now that the class is initialized to a variable, let's connect to an arc:
+- The `rotation` argument specifies north's orientation. If none is provided, `MonomeArc` will assume 0 rotation. Check out the `MonomeArc` help file for additional rotation options!
+- The `prefix` argument is a nickname we can use to alias this script's arc, instead of relying on serial numbers. If none is provided, the instance will be assigned `"/monome"`.
+
+Now that the class is initialized to a variable, let's connect to an arc (make sure to plug one in):
 
 ```js
-~a.connect(0);
+~a.connect();
 ```
 
-Here, our script connects to the first monome device that was physically attached to our device (SuperCollider Lists and Arrays are 0-indexed, so device `0` is the first one). If no device number is provided, `MonomeArc` will connect to the first arc device it finds.
+We can optionally specify a device number to connect to -- SuperCollider Lists and Arrays are 0-indexed, so device `0` is the first-connected monome device. If no device number is provided, `MonomeArc` will connect to the first arc device it finds.
 
 Please note that there needs to be a slight delay in between initializing the new device and connecting to it. Waiting until the server starts provides the necessary time buffer:
 
 ```js
 (
-~a = MonomeArc.new(rotation: 0, prefix: "/monome");
+~a = MonomeArc.new();
 
 s.waitForBoot({
-	~a.connect(0);
+	~a.connect();
 });
 )
 ```
@@ -132,8 +134,6 @@ We can also refresh the list of devices that have been connected since the Serve
 
 *See [arc-studies-2-1.scd](files/arc-studies-2-1.scd) for this section.*
 
-![](images/arc-studies-sc-2.png)
-
 ### 2.1 hardware input {#hardware-input}
 
 We read arc encoder turns by utilizing the `delta` method. Two parameters are received, in order:
@@ -160,7 +160,7 @@ Server.default = Server.local;
 // * rotation (0 is default)
 // * prefix (a string nickname for this arc, "/monomeArc" is default)
 
-~a = MonomeArc.new(rotation: 0, prefix: "/monomeArc");
+~a = MonomeArc.new();
 
 s.waitForBoot({
 
@@ -255,7 +255,7 @@ We refresh arc with the `draw` function, where we draw a tick mark on the first 
 
 ```js
 draw = {
-	~a.dark();
+	~a.allOff();
 	~a.led(0, step * 16, 10);
 	for(1, 3, {
 		arg i;
@@ -475,7 +475,7 @@ Done!
 
 - allow each encoder to have its own friction.
 - sync all of the encoders to the movement of the first, at selectable divisions or multiples.
-- implement a 'paging' system, where each encoder controls multiple values depending on the page.
+- implement a 'paging' system, where each encoder controls multiple values depending on the page: min, max, friction setting, shape, etc.
   - try ^this regardless of the presence of keys on your arc!
 
 ### credits

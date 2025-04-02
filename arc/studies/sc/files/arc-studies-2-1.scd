@@ -5,11 +5,11 @@ Server.default = Server.local;
 // * rotation (0 is default)
 // * prefix (a string nickname for this arc, "/monome" is default)
 
-~a = MonomeArc.new(rotation: 0, prefix: "/monome");
+~a = MonomeArc.new();
 
 s.waitForBoot({
 
-	~a.connect(); // 0 (or not supplying any argument) means the first-connected arc
+	~a.connect(); // not supplying any argument means the first-connected arc
 
 	~a.delta({
 		arg n,d;

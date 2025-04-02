@@ -10,7 +10,7 @@ has_toc: false
 
 # cycles
 
-_rotating midi cc with friction_
+_rotating MIDI CC with friction_
 
 ## download
 
