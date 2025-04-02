@@ -12,11 +12,13 @@ has_toc: false
 
 _rotating MIDI CC with friction_
 
+made by [tehn](https://nnnnnnnn.co)
+
 ## download
 
 - [cycles.lua](cycles.lua)
 
-## use
+## instructions
 
 Each knob spins a position which can be accelerated or decelerated with a turn. This position is transmitted as USB-MIDI CC.
 
