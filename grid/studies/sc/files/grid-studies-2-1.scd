@@ -6,11 +6,11 @@ Server.default = Server.local;
 // * prefix (a string nickname for this grid)
 // * fps (frames per second)
 
-~m = MonomeGrid.new(rotation: 0, prefix: "/monome", fps: 60);
+~m = MonomeGrid.new();
 
 s.waitForBoot({
 
-	~m.connect(0); // 0 (or not supplying any argument) means the first-connected device
+	~m.connect(); // 0 (or not supplying any argument) means the first-connected device
 
 	~m.key({
 		arg x,y,z;

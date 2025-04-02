@@ -64,9 +64,10 @@ WARNING: no monome grid detected at device slot <i>
 If you run into this message, simply connect a grid and you'll see it acknowledged in the Post Window:
 
 ```js
-MonomeGrid device added to port: 17675
-MonomeGrid serial: m46674021
-MonomeGrid model: monome 128
+monome device added!
+	model: monome 128
+	port: 17675
+	serial: m46674021
 ```
 You should now be able to re-run your script without issue!
 
@@ -82,12 +83,14 @@ The `MonomeGrid` class facilitates easy communication with grids, modeled after 
 Let's create a variable, `~m`, to initialize the `MonomeGrid` class:
 
 ```js
-~m = MonomeGrid.new(rotation: 0, prefix: "/monome", fps: 60);
+~m = MonomeGrid.new();
 ```
 
-- The `rotation: 0` argument to the initializer is *grid rotation*. If none is provided, `MonomeGrid` will assume 0 rotation. Check out the `MonomeGrid` help file for additional rotation options!
-- The `prefix: "/monome"` argument is a nickname we can use to alias this script's grid, instead of relying on serial numbers. If none is provided, it will be assigned `"/monome"`.
-- The `fps: 60` argument specifies the *frames per second* which the grid will redraw. If none is provided, it will be assigned `60`.
+`MonomeGrid` accepts three additional arguments:
+
+- `rotation`: If none is provided, `MonomeGrid` will assume `0`. Check out the `MonomeGrid` help file for additional rotation options!
+- `prefix`: This is a nickname we can use to alias this script's grid, instead of relying on serial numbers. If none is provided, it will be assigned `"/monome"`.
+- `fps`: We can specify the *frames per second* which the grid will redraw. If none is provided, it will default to `60`.
 
 Now that the class is initialized to a variable, let's connect to a grid:
 
@@ -95,13 +98,13 @@ Now that the class is initialized to a variable, let's connect to a grid:
 ~m.connect(0);
 ```
 
-Here, our script connects to the first monome grid device that was physically attached to our device (SuperCollider Lists and Arrays are 0-indexed, so device `0` is the first one). If no device number is provided, `MonomeGrid` will connect to the first grid device it finds.
+Here, our script connects to the first monome grid device that was physically attached to our computer (SuperCollider Lists and Arrays are 0-indexed, so device `0` is the first one). If no device number is provided, `MonomeGrid` will connect to the first grid device it finds.
 
 Please note that there needs to be a slight delay in between initializing the new device and connecting to it. Waiting until the server starts provides the necessary time buffer:
 
 ```js
 (
-~m = MonomeGrid.new(rotation: 0, prefix: "/monome", fps: 60);
+~m = MonomeGrid.new();
 
 s.waitForBoot({
 	~m.connect(0);
@@ -124,14 +127,13 @@ Once connected, our script's instance of `MonomeGrid` has some individual attrib
 - `~m.rotation`: this grid's assigned rotation
 - `~m.fps`: this grid's assigned refresh rate
 
+We can also query `Monome` directly, for a bird's eye view on all of our devices:
 
-We can also query `MonomeGrid` directly:
+- `Monome.getRegisteredDevices`: returns the serial numbers of each device that's been connected since the Server started
+- `Monome.getPortList`: returns the OSC ports of each device that's been connected since the Server started
+- `Monome.getPrefixes`: returns the assigned prefixes of each device that's been connected since the Server started
 
-- `MonomeGrid.getConnectedDevices`: returns the serial numbers of each device that's been connected since the Server started
-- `MonomeGrid.getPortList`: returns the OSC ports of each device that's been connected since the Server started
-- `MonomeGrid.getPrefixes`: returns the assigned prefixes of each device that's been connected since the Server started
-
-We can also refresh the list of devices that have been connected since the Server started with `MonomeGrid.refreshConnections`.
+We can also refresh the list of devices that have been connected since the Server started with `Monome.refreshConnections`.
 
 
 ## 2. basics {#basics}
@@ -161,11 +163,11 @@ Server.default = Server.local;
 // * prefix (a string nickname for this grid)
 // * fps (frames per second)
 
-~m = MonomeGrid.new(rotation: 0, prefix: "/monome", fps: 60);
+~m = MonomeGrid.new();
 
 s.waitForBoot({
 
-	~m.connect(0); // 0 (or not supplying any argument) means the first-connected device
+	~m.connect(); // no device argument connects to the first-populated grid device
 
 	~m.key({
 		arg x,y,z;
@@ -548,8 +550,8 @@ Done!
 
 *SuperCollider* was written by James McCartney and is now maintained [as a GPL project by various people](https://supercollider.github.io).
 
-The original `monom` SuperCollider library was written by [Raja Das and Joseph Rangel](https://github.com/Karaokaze/Monom_SCs), was maintained by [Ezra Buchla](https://github.com/catfact/monom/), and was re-built into `monomeSC` in 2023 by [Dan Derks](https://dndrks.com).
+The original `monom` SuperCollider library was written by [Raja Das and Joseph Rangel](https://github.com/Karaokaze/Monom_SCs), was maintained by [Ezra Buchla](https://github.com/catfact/monom/), and was re-built into `monomeSC` in 2023 by [Dani Derks](https://dndrks.com).
 
-This tutorial was written by [Brian Crabtree](http://nnnnnnnn.org) and [Dan/i Derks](https://dndrks.com) for [monome.org](https://monome.org). Huge thanks to Raja Das for his very extensive 'Monoming with SuperCollider Tutorial'.
+This tutorial was written by [Brian Crabtree](http://nnnnnnnn.org) and [Dani Derks](https://dndrks.com) for [monome.org](https://monome.org). Huge thanks to Raja Das for his very extensive 'Monoming with SuperCollider Tutorial'.
 
 Contributions welcome. Submit a pull request to [github.com/monome/docs](https://github.com/monome/docs) or e-mail [help@monome.org](mailto:help@monome.org).
