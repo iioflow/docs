@@ -65,7 +65,7 @@ end
 
 function osc.event(path,args,from)
   -- since our Max patch is sending parameter value changes directly
-  --  via '/params/x_axis' and '/params/y_axis',
+  --  via '/param/x_axis' and '/param/y_axis',
   --  we'll only need to intercept its 'send' path:
   if path == "send" then
     print("external IP "..from[1])
@@ -137,11 +137,11 @@ norns can send to any OSC port which your destination device accepts
 
 ### mapping OSC control over parameters + hardware {#map}
 
-norns has a special OSC formatter reserved for mapping script parameters: `/params/param_id val`.
+norns has a special OSC formatter reserved for mapping script parameters: `/param/param_id val`.
 
 The `param_id` display can be toggled in the norns parameters menu by holding K1 and pressing K3 -- this brings norns in and out of MAP mode.
 
-In our example, we set up parameter IDs `x_axis` and `y_axis`, so if norns receives `/params/x_axis 60`, it will change the `x_axis` parameter to 60.
+In our example, we set up parameter IDs `x_axis` and `y_axis`, so if norns receives `/param/x_axis 60`, it will change the `x_axis` parameter to 60.
 
 The encoders and keys can also be manipulated via OSC using `/remote/enc` and `remote/key`. `enc` expects a delta value (eg. `/remote/enc 1 -1` will 'turn' encoder 1 to the left). `key` expects a `1` or `0` for 'press' or 'release' (eg. `/remote/key 3 1` will 'press' key 3 and `/remote/key 3 0` will 'release' it).
 
