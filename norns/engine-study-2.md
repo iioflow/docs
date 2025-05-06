@@ -346,7 +346,7 @@ The second adaptation is more controllable than our first, but we've traded poly
 
 In the code below, we'll introduce a few new gestures:
 
-- To establish a 'local' scope variable, we'll utilize a `classvar`. From [the University of Washington's SuperCollider docs](depts.washington.edu/dxscdoc/Help/Reference/Classes.html): "Class variables are values that are shared by all objects in the class. Class variables [...] may only be directly accessed by methods of the class."
+- To establish a 'local' scope variable, we'll utilize a `classvar`. From [the University of Washington's SuperCollider docs](https://depts.washington.edu/dxscdoc/Help/Reference/Classes.html): "Class variables are values that are shared by all objects in the class. Class variables [...] may only be directly accessed by methods of the class."
 - Since we want to establish 8 separate voices, we'll set up dictionaries to manage each voice's parameter values. We'll use `.do` to iterate a function with each Dictionary entry, which is comparable to `for i = 1,#params do` in Lua. See [**Control Structures**](https://depts.washington.edu/dxscdoc/Help/Reference/Control-Structures.html#do) in the University of Washington's SuperCollider docs.
 - To simplify the single + 'all' voice controls, we'll include two helper functions inside of the class -- we'll pass `freq` arguments to `playVoice` from `trigger` and parameter values to `adjustVoice` from `setParam`.
   - Since `playVoice` and `adjustVoice` are local to the Moonshine object, we call them from within the Class file by prepending `this.`, eg. `this.playVoice` and `this.setParam`. See [**Instance Methods**](https://doc.sccode.org/Guides/WritingClasses.html#Instance%20Methods) for more info.
