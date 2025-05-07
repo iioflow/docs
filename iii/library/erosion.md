@@ -14,6 +14,11 @@ for iii arc
 
 _four meta-knobs controlling four MIDI CC each_
 
+# media
+
+- performance: [vimeo.com/1072397621](https://vimeo.com/1072397621)
+- howto: [vimeo.com/1082217606](https://vimeo.com/1082217606)
+
 
 ## download
 

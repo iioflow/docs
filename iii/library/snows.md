@@ -14,6 +14,10 @@ _very slow asynchronous arpeggiator_
 
 made by [tehn](https://nnnnnnnn.co)
 
+## media
+
+- performance: [vimeo.com/1069216011](https://vimeo.com/1069216011)
+
 ## download
 
 - [snows.lua](snows.lua)
