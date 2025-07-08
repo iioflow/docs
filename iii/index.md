@@ -87,9 +87,8 @@ For ease of managing scripts, navigate to the folder with your iii scripts ie:
 cd ~/iii
 ```
 
-Type `diii` in a terminal.
+Type `diii` in a terminal. If things are working, it will report your device connected.
 
-If things are working, it will report your device connected.  
 A few quick commands:
 
 ```
@@ -127,4 +126,5 @@ arc
 - [cycles](library/cycles) - rotating midi cc with friction
 - [erosion](library/erosion) - four by four meta cc with interpolation and scene recall
 - [snows](library/snows) - very slow asynchronous arpeggiator
+- [ribbons](library/ribbons) - folded euclidean arpeggiator
 
