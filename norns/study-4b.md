@@ -58,7 +58,7 @@ The arc device table also has callback functions for what happens when you turn 
 >> a.delta = function(n,d) print(n,d) end
 ```
 
-You'll now see the `n` and `d` of each encoder turn print to maiden's REPL, where `n` is the encoder identifier and d is the direction. Notice that gentle turns yield small deltas, and more robust turns yield larger deltas. Let's put these basic things together for something slightly more inspiring.
+You'll now see the `n` and `d` of each encoder turn print to maiden's REPL, where `n` is the encoder identifier and `d` is the direction. Notice that gentle turns yield small deltas, and more robust turns yield larger deltas. Let's put these basic things together for something slightly more inspiring.
 
 **If you've gone through the previous studies:**
 
@@ -360,7 +360,7 @@ end
 ## reference
 ### norns-specific
 - `arc` -- module to manage messages to/from a connected monome arc and send LED state data, see [`arc` API docs](../api/modules/arc) for detailed usage
-- `musicutil` -- library to perform standard musical functions, see [`MusicUtil` API docs](../api/modules/lib.MusicUtil.html) for detailed usage
+- `musicutil` -- library to perform standard musical functions, see [`MusicUtil` API docs](../api/modules/lib.musicutil.html) for detailed usage
 - `util` -- library to perform common utility functions, see [`Util` API docs](../api/modules/lib.util.html) for detailed usage
 
 ### general
