@@ -18,6 +18,12 @@ arc is a USB device. It sends serial data when knobs are turned, and changes lig
 - each knob is encircled by a sixty-four segment light ring, sixteen-step brightness per LED.
 - 2025 edition has a single pushbutton (see [editions](editions) for more details).
 
+## mode switching
+
+New edition arcs have support for [iii](https://monome.org/docs/iii), turning the device into a MIDI and serial device which can host its own scripts.
+
+Most use cases (computers with serialosc, norns, ansible) require the arc to be in serialosc mode. Switch modes by holding down the key wihle powering up.
+
 ## with computers
 
 [First install serialosc](/docs/serialosc/setup). serialosc runs in the background and converts USB serial communication into Open Sound Control (OSC). Applications query serialosc to connect to a grid or arc.
