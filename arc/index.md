@@ -22,7 +22,7 @@ arc is a USB device. It sends serial data when knobs are turned, and changes lig
 
 New edition arcs have support for [iii](https://monome.org/docs/iii), turning the device into a MIDI and serial device which can host its own scripts.
 
-Most use cases (computers with serialosc, norns, ansible) require the arc to be in serialosc mode. Switch modes by holding down the key wihle powering up.
+Most use cases (computers with serialosc, norns, ansible) require the arc to be in serialosc mode. Switch modes by holding down the key while powering up.
 
 ## with computers
 
@@ -30,7 +30,7 @@ Most use cases (computers with serialosc, norns, ansible) require the arc to be 
 
 ### applications
 
-[VCV Rack](/docs/grid/computer/vcv-rack) is a virtual modular synth. The Ansible module communicates with arc. 
+[VCV Rack](/docs/grid/computer/vcv-rack) is a virtual modular synth. The Ansible module communicates with arc.
 
 [Max](http://cycling74.com/products/max) is a patching environment created by Cycling '74. A free runtime is available. Max for Live is a part of Ableton Live Suite. The following work with Max or Max for Live:
 
