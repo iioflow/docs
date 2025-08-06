@@ -25,7 +25,7 @@ This section assume two things are true:
       - `crw-rw-rw-  1 root  wheel   20,   6 Nov  8 08:08 /dev/tty.usbserial-m1100368`  
       - `crw-rw-rw-  1 root  wheel    9,   4 Oct 28 09:54 /dev/tty.usbmodemm44094551`
 
- **If you are running macOS 10.14 or earlier, then there are some additional troubleshooting steps to pursue:**
+ **If you have a pre-2021 grid and are running macOS 10.14 or earlier, then there are some additional troubleshooting steps to pursue:**
 
 3. In Terminal, confirm that you do not have any conflicting FTDI drivers installed:
     - execute `ls /System/Library/Extensions | grep FTDI`
@@ -64,6 +64,5 @@ If you've reached this point and things still aren't working, please contact [he
 If your grid or arc is not being detected when you plug into your Windows machine (but it is showing the light burst indicating its receiving power over USB), here are a few things to try.
 
 1. If you're using Max/MSP and don't have iTunes installed on your device, you might be missing Bonjour, which Max uses to communicate with OSC and networked devices. To remedy, please install [Bonjour Print Services](http://support.apple.com/kb/DL999).
-2. The [beta version of serialosc 1.4.1](https://github.com/monome/serialosc/releases/download/v1.4.1/serialosc-1.4.2-pre.exe.zip) might improve connectivity.
 3. Try starting serialosc manually from the Services program. If you see `Error 1075`, you might need to [tweak your registry](https://llllllll.co/t/trouble-setting-up-monome/7001/5).
 4. If you have [a grid made before 2021](https://monome.org/docs/grid/editions/), you may need to manually install the FTDI VCP driver, which you get get [here](https://ftdichip.com/drivers/vcp-drivers/).
