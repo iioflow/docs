@@ -48,7 +48,7 @@ To connect norns to your local network router:
 
 After a network is added, norns remembers the credentials. Known networks are stored under **CONNECT**. You can remove known networks under **DEL**.
 
-Having trouble with connectivity? Please see [the WiFi section](/docs/norns/help/#wifi-troubleshooting) of our extended help docs.
+Having trouble with connectivity? Please see [the WiFi section](/docs/norns/help/hardware/#wifi-troubleshooting) of our extended help docs.
 
 ### hosting a hotspot from norns {#hotspot}
 
